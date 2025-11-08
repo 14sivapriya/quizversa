@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Host — QuizVerse</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">QuizVerse</a>
+    </div>
+  </header>
+
+  <main class="centered">
+    <div class="card" style="width:720px">
+      <h2>Create a Room</h2>
+      <label>Topic (type anything)</label>
+      <input id="topicInput" placeholder="e.g. Space, Movies, Cricket" />
+
+      <label>Difficulty</label>
+      <select id="difficultySelect">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <label>Number of questions</label>
+      <select id="numQ">
+        <option>5</option>
+        <option selected>10</option>
+        <option>15</option>
+      </select>
+
+      <div style="margin-top:12px">
+        <button id="createBtn" class="btn">Create Room</button>
+        <a href="join.html" class="btn ghost" style="margin-left:8px">Join a Room</a>
+      </div>
+      <p id="status" class="muted"></p>
+    </div>
+  </main>
+
+  <script type="module" src="js/host.js"></script>
+</body>
+</html>

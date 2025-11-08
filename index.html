@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>QuizVerse — Play. Compete. Learn.</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs>
+          <rect rx="6" width="24" height="24" fill="url(#g)"></rect>
+          <path d="M7 8.5L12 12.2L17 8.5V15a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V8.5Z" fill="#fff" opacity="0.95"/>
+        </svg>
+        <div>
+          <div class="brand-name">QuizVerse</div>
+          <small class="muted">Play. Compete. Learn.</small>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="host.html">Host</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="leaderboard.html">Leaderboard</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <button id="authBtn" class="btn">Sign in</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="centered">
+    <div class="card container" style="max-width:900px;display:flex;gap:20px;align-items:center">
+      <div style="flex:1">
+        <h1 style="margin:0 0 10px">Create fun quizzes — invite friends</h1>
+        <p class="muted">Host live quizzes, sync timers, reactive leaderboard, and more. Built for portfolio — production-ready.</p>
+        <div style="margin-top:12px">
+          <a href="host.html" class="btn">Host a Quiz</a>
+          <a href="join.html" class="btn ghost" style="margin-left:8px">Join a Quiz</a>
+        </div>
+      </div>
+      <div style="width:320px">
+        <img src="https://api.dicebear.com/6.x/adventurer-neutral/svg?seed=quizverse" alt="mascot" style="width:100%;border-radius:12px"/>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <svg width="28" height="28" viewBox="0 0 24 24"><defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs><rect rx="6" width="24" height="24" fill="url(#g2)"></rect><path d="M7 8.5L12 12.2L17 8.5V15a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V8.5Z" fill="#fff" opacity="0.95"/></svg>
+        <div style="margin-left:8px"><strong>QuizVerse</strong><div class="muted small">Portfolio demo</div></div>
+      </div>
+      <div class="footer-links">
+        <div><h4>Product</h4><ul><li><a href="host.html">Host</a></li><li><a href="join.html">Join</a></li></ul></div>
+        <div><h4>Company</h4><ul><li><a href="about.html">About</a></li></ul></div>
+      </div>
+      <div class="footer-meta"><div class="small muted">© QuizVerse</div><div class="small muted">Built with ❤️ • Firebase • OpenTriviaDB</div></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('authBtn').addEventListener('click', ()=> location.href='login.html');
+  </script>
+</body>
+</html>

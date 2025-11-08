@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Quiz — QuizVerse</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="index.html">QuizVerse</a></div></header>
+
+  <div class="quiz-wrap">
+    <main class="stage card">
+      <div id="question" class="question">Loading…</div>
+      <div id="options" class="options"></div>
+      <div class="bottom">
+        <div id="timer" class="timer">⏳ 10s</div>
+        <div id="streakBadge" class="streak muted"></div>
+      </div>
+      <div id="emojiBar" class="emoji-bar" style="display:none"></div>
+      <div id="floatingEmojis" class="floating-emojis"></div>
+    </main>
+
+    <aside class="sidebar card" style="width:320px">
+      <h4 id="roomIdView">Room</h4>
+      <div id="topicView" class="muted">Topic</div>
+      <div class="leaderboard card" style="margin-top:12px">
+        <h4>🏆 Leaderboard</h4>
+        <div id="leaderboard"></div>
+      </div>
+    </aside>
+  </div>
+
+  <canvas id="confettiCanvas" style="position:fixed;left:0;top:0;pointer-events:none;width:100%;height:100%;display:none"></canvas>
+
+  <script type="module" src="js/quiz.js"></script>
+</body>
+</html>

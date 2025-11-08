@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Lobby — QuizVerse</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: Arial, sans-serif; background:#f0f2f5; margin:0; padding:0; }
+    .site-header { background:#4a76a8; color:#fff; padding:12px 20px; }
+    .site-header .brand { color:#fff; text-decoration:none; font-weight:bold; font-size:1.5em; }
+    .centered { display:flex; justify-content:center; align-items:flex-start; padding:20px; }
+    .card { background:#fff; padding:20px; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.1); width:720px; }
+    #question { font-size:1.3em; margin-bottom:12px; }
+    #options { display:flex; flex-direction:column; gap:8px; margin-bottom:12px; }
+    .option-btn { padding:8px; font-size:1em; border:none; border-radius:8px; cursor:pointer; background:#eee; transition:0.2s; }
+    .option-btn:hover { background:#ddd; }
+    .option-btn.correct { background:#4caf50; color:#fff; }
+    .option-btn.wrong { background:#f44336; color:#fff; }
+    #timer { font-weight:bold; margin-bottom:12px; }
+    #leaderboard { margin-top:12px; background:#fafafa; padding:10px; border-radius:8px; max-height:200px; overflow-y:auto; }
+    .lb-row { display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px solid #eee; }
+    #emojiBar { display:flex; gap:6px; margin-top:12px; }
+    .emoji-btn { font-size:1.2em; cursor:pointer; border:none; background:none; }
+    #floatingEmojis { position:absolute; top:50px; left:0; width:100%; pointer-events:none; }
+    .floating-emoji { position:absolute; font-size:2em; opacity:0.9; transition: transform 2s linear, opacity 2s linear; }
+    .floating-emoji.float { transform:translateY(-200px); opacity:0; }
+    #roomIdView, #topicView { font-weight:bold; margin-bottom:6px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">QuizVerse</a>
+    </div>
+  </header>
+
+  <main class="centered">
+    <div class="card" style="position:relative;">
+      <div id="roomIdView">Room • ---</div>
+      <div id="topicView">Topic · Difficulty</div>
+
+      <div id="question">Waiting for questions...</div>
+      <div id="options"></div>
+      <div id="timer">⏳ 0s</div>
+
+      <div id="emojiBar"></div>
+      <div id="leaderboard"></div>
+      <div id="floatingEmojis"></div>
+
+      <div style="margin-top:16px">
+      <button id="startBtn" class="btn">Start Game</button>
+      </div>
+
+<div id="questionNumber" style="font-weight:bold;margin-bottom:6px;"></div>
+<div id="question">Waiting for questions...</div>
+
+
+    </div>
+  </main>
+
+  <script type="module" src="js/lobby.js"></script>
+</body>
+</html>
+
+
